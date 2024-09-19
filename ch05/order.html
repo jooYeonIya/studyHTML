@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        이름 : <input typ="text" value="홍길동" readonly>
+        <input type="hidden" name="id" value="aa">
+    </fieldset>
+    <fieldset>
+        <legend>상품정보</legend>
+        <select name="product" id="product">
+            <option value="3">3kg</option>
+            <option value="4">4kg</option>
+            <option value="5">5kg</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>포장</legend>
+        <form action="orderCreate.html" method="get" name="package">
+           선물 포장<input type="radio" name="present" id="present" value="선물포장 함">
+           선물 포장 안 함<input type="radio" name="present" id="present" value="선물포장 안 함">
+          <button type="submit">주문</button>
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <form action="orderCreate.html" method="get" name="choice">
+            3키로<input type="checkbox" name="weight3" id="weight" value="3">
+            4키로<input type="checkbox" name="weight4" id="weight" value="4">
+            5키로<input type="checkbox" name="weight5" id="weight" value="5">
+            6키로<input type="checkbox" name="weight6" id="weight" value="6">
+            
+            배송일자<input type="datetime-local" name="datetime-locald" id="datetime-local">
+            주문서 <input type="file" name="file" id="file">
+
+            <input type="hidden" name="name" value="aaaa">
+
+            <button type="submit">주문</button>
+        </form>
+    </fieldset>
+</body>
+</html>
