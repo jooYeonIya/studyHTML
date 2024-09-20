@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            border: 2px solid rebeccapurple;
+            width: 500px;
+        }
+        .div>div:nth-child(even) {
+            background-color: rgb(104, 224, 104);
+        }
+        .div>div:nth-child(odd) {
+            background-color: cornflowerblue
+        }
+        .div>div {
+            width: 100px;
+            height: 50px;
+            border: 1px black solid;
+            text-align: center;
+            display: inline-block;
+        }
+        #option1 {
+            display: flex;
+            flex-direction: row;
+        }
+        #option2 {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        #option3 {
+            display: flex;
+            flex-direction: column;
+        }
+        #option4 {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="option1" class="div">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div id="option2" class="div">
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <div id="option3" class="div">
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+        <div id="option4" class="div">
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+    </div>
+</body>
+</html>
