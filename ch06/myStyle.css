@@ -45,4 +45,22 @@ tr {
 .border {
     border: orangered solid;
     border-width: 40px;
+    border-radius: 50%;
+}
+
+#imgDiv {
+    background-color: skyblue;
+}
+
+#img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#divDiv {
+    background-color: blueviolet;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
