@@ -1,0 +1,28 @@
+body {
+    color: blue;
+    background-color: bisque;
+}
+
+* {
+    margin: 10px;
+    padding: 10px;
+}
+
+h1, h2 {
+    color: green;
+}
+
+/* id를 찾아간다 한 번만 사용 */
+#info {
+    color: purple;
+}
+
+/* class를 찾아간다 복수개 사용*/
+.list {
+    background-color: white;
+}
+
+/* 클래스 지정해주고 :  뒤에 있는 건 가상 (추상) 클래스, 즉 이미 만들어져 있음 */
+.list:hover {
+    background-color: pink;
+}
