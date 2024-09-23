@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 같은 타입이 아니어도 괜찮다
+        let array = ['봄', '여름', '가을', '겨울' , 1, 2, 3, 4];     
+        console.log(array);
+
+        let number = prompt('숫자 입력?');
+
+        // 10이랑 '10'을 같은 거라고 판단한다 
+        // 10을 입력해도 typeof string 으로 출력됨
+        // if (number == 10) {
+        //     console.log(typeof(number));
+        // }
+
+        let intNumber = parseInt(number);
+
+        // 자료형까지 맞게 하려면 === 로 해야함
+        if (intNumber === 10) {
+            console.log("int???" + typeof(intNumber));
+        }
+    </script>
+</body>
+</html>
