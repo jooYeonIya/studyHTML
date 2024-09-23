@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- count만큼
+    2 * 1 = 2
+    2 * 2 = 4  -->
+    <script>
+        // 10을 넣었을 때 string이라도 느슨한 자료형이기 때문에 연산이 되긴한다
+        // 하지만 10같은 숫자가 아니라 ㅁㄴㅇㄹ 같은 문자가 들어올 수도 있기 때문에
+        // 자료형 변환을 해주면 더 좋음
+        let count = parseInt(prompt("숫자 입력"));
+        for(let i = 0; i < count; i++) {
+            let newI = i + 1
+            document.write(`2 * ${newI} = 2 * ${newI}`);
+            document.writeln("<br>");
+        }
+    </script>    
+</body>
+</html>
