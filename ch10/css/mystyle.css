@@ -26,18 +26,18 @@ container {
 @media screen and (min-width:768px) and (max-width:1439px){
     #container {
       width: 570px;
-      margin:10px auto;
+      margin: 10px auto;
     }
     .card {
       position:relative;
-      width:550px;
+      width: 550px;
       height: 250px;
       margin: 20px 10px;
       background-color: #ffffff;
     }
     .words {
       position:absolute;
-      left:310px;
+      left: 310px;
       top: 10px;
       padding: 10px;
       text-align: center;
@@ -48,7 +48,7 @@ container {
   @media screen and (min-width:1440px){
     #container {
       width: 1140px;
-      margin:10px auto;
+      margin: 10px auto;
     }
     .card {
       position:relative;
@@ -59,7 +59,7 @@ container {
       background-color: #ffffff;
     }
     .words {
-      position:absolute;
+      position: absolute;
       top: 10px;
       padding: 10px;
       text-align: center;
