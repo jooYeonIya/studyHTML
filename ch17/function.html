@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(result2);
+
+        function addNumber() {
+            let sum = 10 + 10;
+            return sum;
+        }
+
+        let result = addNumber();
+        console.log(result);
+        console.log(addNumber)
+
+        // 함수도 하나의 객체로 취급하기 때문에 변수에 할당할 수 있음
+        let fn = addNumber;
+        console.log(fn());
+        console.log(fn);
+
+        // 함수와 var는 호이스팅이 적용 됨
+        // let이랑 const는 호이스팅 적용 안 됨
+        var result2 = 0;
+
+        // 디폴트값 설정 간ㅇ
+        function multiple(num1, num2 = 0, num3 = 0) {
+            return num1 + num2 + num3
+        }
+
+        console.log(multiple(1,2,3))
+        console.log(multiple(1,2))
+        console.log(multiple(1))
+    </script>
+</body>
+</html>
