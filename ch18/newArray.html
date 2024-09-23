@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let array = [1, 2, 3, 4];
+        let array = new Array();
+        array[0] = 1;
+        array[1] = 2;
+        array[2] = 3;
+        array[3] = 4;
+        array[10] = 10; // length 는 11로 나옴
+
+        console.log(array);
+        console.log(array[2]);
+        console.log(array[9]); // 비어있기 때문에 undefined 나옴 (초기화 해라 이놈아)
+
+        let number = prompt("숫자 입력");
+        for (let i = 0; i < number; i++) {
+            array[i] = i;
+        }
+
+        console.log(array);
+    </script>
+</body>
+</html>
