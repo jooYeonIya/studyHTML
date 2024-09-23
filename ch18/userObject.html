@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 사용자 객체 만들기
+
+        // 1. 텅 비어있는 object 객체에 넣고 싶은 것들 넣어서 생성
+        let accout = new Object();
+        accout.name = "kang";
+        accout.money = 10000;
+
+        let accout2 = new Object();
+        accout2.name = "hong";
+        accout2.money = 20000;
+
+        // 두가지 표현법이 있음
+        alert(accout.name);
+        document.write(accout2["name"]);
+
+        // 2. 리터럴 표기법
+        let account3 = {
+            name: "kim",
+            age: 100,  
+            balance: 20000,
+            withdraw: function(money) {
+                if(money<=100) {
+                    this.balance -=money
+                }
+                return money;
+
+            } 
+        }
+
+        document.write("<br>");
+        document.write(account3.age);
+
+        document.write("<br>");
+        document.write(`${account3.withdraw(50)}, ?? ${account3.balance}`);
+
+        // 3. 프로토타입(?) 만들어서 생성
+        function Account(name, money) {
+            this.name = name;
+            this.money = money;
+        }
+
+        let account4 = new Account("lee", 10000);
+        
+        document.write("<br>");
+        document.write(account4.name);
+        
+    </script>
+</body>
+</html>
