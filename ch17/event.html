@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn {
+            background-color: darksalmon;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>hi</h1>
+    <hr>
+    <button id = "btn" onclick="onClick()">click</button>
+
+    <script>
+        var count = 0;
+        function onClick() {
+            console.log("button click");
+            console.log(`button click ${count++}`);
+        }
+    </script>
+</body>
+</html>
