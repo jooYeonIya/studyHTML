@@ -10,14 +10,14 @@
     <h1 id="heading" style="color:aquamarine; background-color: white;">에티오피아 게뎁</h1>
     <div id="pic-container">
         <img id="prod-pic" src="images/coffee-pink.jpg" alt="커피 핑크" 
-        onmouseover="headerColorChange(true)" 
+        onmouseover="headerColorChange(true)""
         onmouseleave="headerColorChange(false)">
         <div id="small-pic">
             <img class="small" src="images/coffee-pink.jpg" alt="커피 핑크" 
-            onclick="smallPicSizeChange(true)" 
+            onclick="smallPicSizeChange(true); changeImage('coffee-pink.jpg')"
             ondblclick="smallPicSizeChange(false)">
-            <img class="small" src="images/coffee-blue.jpg" alt="커피 블루">
-            <img class="small" src="images/coffee-gray.jpg" alt="커피 그레이">
+            <img class="small" src="images/coffee-blue.jpg" alt="커피 블루" onclick="changeImage('coffee-blue.jpg')">
+            <img class="small" src="images/coffee-gray.jpg" alt="커피 그레이" onclick="changeImage('coffee-gray.jpg')">
         </div>
     </div>
     <div id="decs-container">
@@ -53,6 +53,11 @@
             } else {
                 pinkImg.style.width = "60px";
             }
+        }
+
+        function changeImage(url) {
+            let image = document.getElementById("prod-pic");
+            image.src = `images/${url}`;
         }
     </script>
 </body>

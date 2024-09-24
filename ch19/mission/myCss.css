@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+html, body {
+    height: 100%;
+    font-family: Nanum Pen Script;
+    font-size: 28px;
+    background-color: bisque;
+}
+
+aside {
+    width: 200px;
+    height: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: Electrolize;
+}
+
+.timImg {
+    float: left;
+    margin-right: 30px;
+}
+
+.logoImg {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    color: palevioletred
+}
+
+.timDiv {
+    margin-top: 10px;
+}
+
+hr {
+    border-color: plum;
+}
