@@ -1,0 +1,22 @@
+#pic-container {
+    width: 200px;
+    margin-right: 20px;
+    float: left;
+}
+
+#prod-pic {
+    width: 200px;
+}
+
+#small-pic {
+    width: 200px;
+    height: 64px;
+}
+
+.small {
+    width: 60px;
+}
+
+#decs-container {
+
+}
