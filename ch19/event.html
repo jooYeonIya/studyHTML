@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 억지스런 예제긴 함
+        // 전역 변수로 선언
+        var secP, thridP;
+
+        // 다큐먼트가 다 로드되면
+        function init() {    
+            secP = document.querySelector("#secP");
+            // 함수 등록만 한 것 = 호출이 아님
+            // 객체에 프로퍼티로 이벤트 함수를 등록하는 방법 (이벤트 리스너 방법 2)
+            secP.onmouseover = changeRed;
+            secP.onmouseout = changeBlack;
+
+            thridP = document.querySelector("#thridP");
+            thridP.addEventListener("mouseover", changeRed3);
+            thridP.addEventListener("onmouseout", changeBlack3);
+        }
+    </script>
+</head>
+<body onload="init()">
+    <!-- 태그 내에 작성 (이벤트 리스너 방법1) -->
+    <p id="firstP"
+        onmouseover="this.style.color='red'"
+        onmouseout="this.style.color='black'">마우스를 올리면 색이 변한다 1</p>
+
+    <p id="secP">마우스를 올리면 색이 변한다 2</p>
+
+    <p id="thridP">마우스를 올리면 색이 변한다 3</p>
+
+    <script>
+        function changeRed() {
+            secP.style.color='red';
+        }
+
+        function changeBlack() {     
+            secP.style.color='black';      
+        }
+
+        function changeRed3() {
+            thridP.style.color='red';
+        }
+
+        function changeBlack3() {     
+            thridP.style.color='black';      
+        }
+    </script>
+</body>
+</html>
