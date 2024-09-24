@@ -8,13 +8,13 @@
 <body>
     <form action="aaa.html">
         input <input type="text" name="query">
-        <input type="submit" value="submit">
+        <input type="submit" value="submit" onclick="prevent(event)">
 
         <!-- form 안에 있는 타입이 submit일 때 input type="submit" 와 같이 행동함 -->
-        <button type="submit">button</button>
+        <button type="submit" onclick="prevent(event)">button</button>
     </form>
 
-    <button onclick="show(event)">button</button>
+    <button onclick="show(event)">button</button>`
 
     <script>
         // evnet 객체의 정보를 가져올 수 있음
@@ -24,6 +24,11 @@
             console.log(e.target);
             console.log(e.defaultPrevented);
             console.log(e.currentTarget);
+        }
+
+        function prevent(event) {
+            // 이벤트의 디폴트 행동 강제 취소 
+            event.preventDefault();
         }
     </script>
 </body>
