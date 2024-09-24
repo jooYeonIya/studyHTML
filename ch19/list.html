@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="addNewList()">add list</button>
+    <ul id="parent">
+        <li class="list">1</li>
+        <li class="list">2</li>
+        <li class="list">3</li>
+    </ul> 
+    <script>
+        function addNewList() {
+            let number = document.querySelector("#input").value;
+            // let number = document.getElementById("input").value; 위랑 같음
+
+            let newList = document.createElement("li");
+            newList.setAttribute("class", "list"); // class를 list로 설정
+            newList.innerText = number;
+
+            let parent = document.getElementById("parent");
+            parent.appendChild(newList);
+        }
+    </script>
+</body>
+</html>
