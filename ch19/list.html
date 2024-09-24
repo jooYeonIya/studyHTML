@@ -8,11 +8,8 @@
 <body>
     <input type="text" id="input">
     <button onclick="addNewList()">add list</button>
-    <ul id="parent">
-        <li class="list">1</li>
-        <li class="list">2</li>
-        <li class="list">3</li>
-    </ul> 
+    <button onclick="removeLastList()">delete last list</button>
+    <ul id="parent"></ul> 
     <script>
         function addNewList() {
             let number = document.querySelector("#input").value;
@@ -24,6 +21,17 @@
 
             let parent = document.getElementById("parent");
             parent.appendChild(newList);
+        }
+
+        function removeLastList() {
+            let parent = document.getElementById("parent");
+            if (parent.lastChild) {
+                parent.removeChild(parent.lastChild);
+            }
+
+            // null 체크를 null 병합 연산자 ?? 를 써서 할 수도 있음
+            let result = parent.lastChild ?? "삭제할 노드 없습니다";
+            console.log(result);
         }
     </script>
 </body>
