@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="aaa.html">
+        input <input type="text" name="query">
+        <input type="submit" value="submit">
+
+        <!-- form 안에 있는 타입이 submit일 때 input type="submit" 와 같이 행동함 -->
+        <button type="submit">button</button>
+    </form>
+
+    <button onclick="show(event)">button</button>
+
+    <script>
+        // evnet 객체의 정보를 가져올 수 있음
+        function show(e) {
+            console.log(e);        
+            console.log(e.type);
+            console.log(e.target);
+            console.log(e.defaultPrevented);
+            console.log(e.currentTarget);
+        }
+    </script>
+</body>
+</html>

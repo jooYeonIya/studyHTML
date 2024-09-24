@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var secP, thridP;
+
+        function init() {    
+            secP = document.querySelector("#secP");
+            secP.onmouseover = changeRed3;
+            secP.onmouseout = changeBlack3;
+
+            thridP = document.querySelector("#thridP");
+            thridP.addEventListener("mouseover", changeRed3);
+            thridP.addEventListener("mouseout", changeBlack3);
+        }
+    </script>
+</head>
+<body onload="init()">
+
+    <p id="firstP"
+    onmouseover="changeRed3(event)"
+    onmouseout="changeBlack3(event)">마우스를 올리면 색이 변한다 1</p>
+
+    <p id="secP">마우스를 올리면 색이 변한다 2</p>
+
+    <p id="thridP">마우스를 올리면 색이 변한다 3</p>
+
+    <script>
+        // 이벤트 객체의 정보를 이용해서 함수 하나만 만들어도 다양한 곳(이벤트가 발생한 곳)에서 사요할 수 있음
+        function changeRed3(event) {
+            event.target.style.color='red';
+        }
+
+        function changeBlack3(event) {     
+            event.target.style.color='black';      
+        }
+    </script>
+</body>
+</html>
