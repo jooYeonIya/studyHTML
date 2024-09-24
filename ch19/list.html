@@ -18,6 +18,19 @@
             let newList = document.createElement("li");
             newList.setAttribute("class", "list"); // class를 list로 설정
             newList.innerText = number;
+            
+            let button = document.createElement("button");
+            button.innerText = "x";
+            // 함수()로 작성하면 즉시 실행을 의미 -> 이렇게 설정하면 함수가 바로 실행되버려서 에러
+            //button.addEventListener("click", removeList(newList));
+
+            // 그래서 함수만 적으면 함수 참조를 넘기는 것입니다. 즉, 해당 함수는 나중에 호출
+            button.addEventListener("click", function() {
+                // 버튼이 있는 <li> 요소 전체를 삭제
+                removeList(newList);
+            });
+
+            newList.appendChild(button);
 
             let parent = document.getElementById("parent");
             parent.appendChild(newList);
@@ -32,6 +45,11 @@
             // null 체크를 null 병합 연산자 ?? 를 써서 할 수도 있음
             let result = parent.lastChild ?? "삭제할 노드 없습니다";
             console.log(result);
+        }
+
+        function removeList(element) {
+            let parent = element.parentNode;
+            parent.removeChild(element);
         }
     </script>
 </body>
