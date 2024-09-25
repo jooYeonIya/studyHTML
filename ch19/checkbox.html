@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>물품을 선택하면 금액이 자동 계산됩니다</h1>
+    <hr>
+    <form action="#">
+        <input type="checkbox" value="10000" onclick="calc(this)">모자 10000
+        <input type="checkbox" value="30000" onclick="calc(this)">구두 30000
+        <input type="checkbox" value="80000" onclick="calc(this)">가방 10000
+        지불하실 금액<input type="text" value="0" id="result" readonly>
+    </form>
+
+    <script>
+        function calc(element) {
+            let reuslt = document.getElementById("result");
+            let sum = parseInt(reuslt.value);
+
+            if(element.checked) {
+                sum += parseInt(element.value);
+            } else {
+                sum -= parseInt(element.value);
+            }
+
+            reuslt.value = sum;
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>버튼을 클릭하면 선택된 라디오 버튼의 value 출력</h1>
+    <hr>
+    <form action="#">
+        <label for="city">도시</label><br>
+        <input type="radio" name="city" id="city" value="seoul" checked>서울
+        <input type="radio" name="city" id="city" value="busan">부산
+        <input type="radio" name="city" id="city" value="chuncheon">춘천
+        <!-- 버튼을 누르면 폼이 제출되고 폼이 제출되면 페이지가 새로고침되고
+         그러면 라디오 버튼은 초기화 됨-->
+        <button onclick="show(event)">click</button>
+    </form>
+
+    <script>
+        function show(event) {
+            // 따라서 폼이 제출되는 것을 방지해야 함
+            event.preventDefault();
+            // 선택자는 많이 있음
+            // let radio = document.getElementsByName("city");
+            let radio = document.querySelectorAll("input[name=city]");
+            for (let i = 0; i < radio.length; i++) {
+                if (radio[i].checked == true) {
+                    alert(radio[i].value);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

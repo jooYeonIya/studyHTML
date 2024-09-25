@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>계산기 만들기</h1>
+    <hr>
+    <p>계산하고자 하는 수식을 입력하고 계산 버튼을 누르세요</p>
+
+     <form action="">
+        <label for="exp">식</label><input type="text" id="exp" value="">
+        <label for="result">결과</label><input type="text" id="result" readonly>
+        <input type="button" value="계산" onclick="calculate()">
+     </form>
+
+     <script>
+        function calculate() {
+            let exp = document.getElementById("exp").value;
+            let result = document.getElementById("result");
+            result.value = eval(exp);
+        }
+     </script>
+</body>
+</html>
