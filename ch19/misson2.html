@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        이름 <input type="text" name="" id="name">
+        학번 <input type="text" name="" id="number">
+        <input type="button" value="click" onclick="welcomeAlert()">
+    </form>
+
+    <script>
+        function welcomeAlert() {
+            // input 에서 해당 필드가 비어 있어도 null이 아니라 ""(빈문자열)로 처리됨
+            let name = document.getElementById("name").value;
+            let number = document.getElementById("number").value;
+            if (name != null) {
+                alert(`${name}, ${number}`);
+            }
+        }
+    </script>
+</body>
+</html>
