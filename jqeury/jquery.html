@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="title">1</div>
+    <div class="title">2</div>
+    <button onclick="addClass()">add class</button>
+    <button onclick="hide()">hide div</button>
+    <button onclick="changeColor()">change color</button>
+    <script>
+        function addClass() {
+            // let titleElements = document.getElementsByClassName("title");
+
+            // for (let title of titleElements) {
+            //     title.className += " selected";
+            // }
+
+            $(".title").addClass("selected");
+
+            console.log(titleElements)
+        }
+
+        function hide() {
+            $("div").hide();
+        }
+
+        function changeColor() {
+            $(".title").css('backgroundColor', 'yellow');
+            $("div").html("<h1>hi</h1>");
+        }
+
+        // 다큐먼트 로딩이 되든 안되든 뜨자마자 무조건 실행됨
+        $(".title").css('backgroundColor', 'red');
+    </script>
+</body>
+</html>
