@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>1</h1>
+    <h1>2</h1>
+    <h1>3</h1>
+    <h1>4</h1>
+    <script>
+        $(() => {
+                $('h1').each((index, item) => {
+                    if (index % 2 == 0) {
+                        $(item).css({
+                            'backgroundColor': 'yellow',
+                            'color': 'red'
+                        });
+                    }
+                })
+            } 
+        )
+    </script>
+</body>
+</html>
